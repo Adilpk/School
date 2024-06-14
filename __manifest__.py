@@ -8,6 +8,7 @@
  'data': ['security/ir.model.access.csv',
           'views/department.xml',
           'views/student_class.xml',
+          'views/subject.xml',
           'views/school_menu.xml',
           ],
  'application': True,
