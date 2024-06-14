@@ -1,0 +1,15 @@
+{
+ 'name': 'School Management',
+ 'version': '17.0.1.0.0',
+ 'category': 'school management',
+ 'summary': 'its a school management module',
+ 'description': """ manage school system """,
+ 'depends': ['base', 'web', 'mail', 'sale'],
+ 'data': ['security/ir.model.access.csv',
+          'views/department.xml',
+          'views/student_class.xml',
+          'views/school_menu.xml',
+          ],
+ 'application': True,
+ 'license': 'LGPL-3',
+}
