@@ -2,3 +2,4 @@ id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
 access_department,school_department,model_department,base.group_user,1,1,1,1
 access_class,school_class,model_student_class,base.group_user,1,1,1,1
 access_subject,student_subject,model_student_subject,base.group_user,1,1,1,1
+access_academic_year,academic_year,model_academic_year,base.group_user,1,1,1,1

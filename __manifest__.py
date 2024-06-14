@@ -9,6 +9,7 @@
           'views/department.xml',
           'views/student_class.xml',
           'views/subject.xml',
+          'views/academic_year.xml',
           'views/school_menu.xml',
           ],
  'application': True,

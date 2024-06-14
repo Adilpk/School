@@ -5,6 +5,7 @@
             <menuitem id="school_department_action" action="department_action"/>
             <menuitem id="school_class_action" action="student_class_action"/>
             <menuitem id="school_subject_action" action="subject_action"/>
+            <menuitem id="school_academic_year_action" action="academic_year_action"/>
         </menuitem>
     </menuitem>
 </odoo>
