@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
 from odoo import models, fields
 
 
 class Department(models.Model):
+    """create department model to store department and head of
+    department"""
     _name = 'department'
     _description = 'department'
 

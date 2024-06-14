@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
 from odoo import models, fields
 
 
 class StudentClass(models.Model):
+    """ create a class model to store class and department"""
     _name = 'student.class'
     _description = 'class'
 
