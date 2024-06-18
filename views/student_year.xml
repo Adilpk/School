@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-        <record id="year_view" model="ir.ui.view">
+        <record id="view_tree_school_year" model="ir.ui.view">
         <field name="name">year.tree.view</field>
-        <field name="model">academic.year</field>
+        <field name="model">school.year</field>
         <field name="arch" type="xml">
             <tree string="channel">
                 <field name="name"/>
             </tree>
         </field>
     </record>
-    <record id="year_form" model="ir.ui.view">
+    <record id="view_form_school_years" model="ir.ui.view">
         <field name="name">year.form</field>
-        <field name="model">academic.year</field>
+        <field name="model">school.year</field>
         <field name="arch" type="xml">
             <form string="class_form">
                 <sheet>
@@ -24,9 +24,11 @@
             </form>
         </field>
     </record>
-    <record id="academic_year_action" model="ir.actions.act_window">
+    <record id="action_school_year" model="ir.actions.act_window">
         <field name="name">Year</field>
-        <field name="res_model">academic.year</field>
+        <field name="res_model">school.year</field>
         <field name="view_mode">tree,form</field>
     </record>
+    <menuitem id="menu_school_year" name="Years" parent="menu_school_management_configuration"
+              action="action_school_year"/>
 </odoo>

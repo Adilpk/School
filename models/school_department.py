@@ -2,11 +2,11 @@
 from odoo import models, fields
 
 
-class Department(models.Model):
+class SchoolDepartment(models.Model):
     """create department model to store department and head of
     department"""
-    _name = 'department'
-    _description = 'department'
+    _name = 'school.department'
+    _description = 'Department'
 
     name = fields.Char(string='Department')
-    hod_id = fields.Many2one('res.partner', string='HOD')
+    hod_id = fields.Many2one('res.partner', string='Head of Department')

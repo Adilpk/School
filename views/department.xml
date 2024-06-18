@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="department_view" model="ir.ui.view">
-        <field name="name">department.tree.view</field>
-        <field name="model">department</field>
+    <!-- Tree View -->
+    <record id="view_tree_school_department" model="ir.ui.view">
+        <field name="name">school.department.tree</field>
+        <field name="model">school.department</field>
         <field name="arch" type="xml">
-            <tree string="channel">
+            <tree string="Departments">
                 <field name="name"/>
                 <field name="hod_id"/>
             </tree>
         </field>
     </record>
-    <record id="department_form" model="ir.ui.view">
-        <field name="name">department.form</field>
-        <field name="model">department</field>
+
+    <!-- Form View -->
+    <record id="view_form_school_department" model="ir.ui.view">
+        <field name="name">school.department.form</field>
+        <field name="model">school.department</field>
         <field name="arch" type="xml">
-            <form string="class_form">
+            <form string="Department Form">
                 <sheet>
                     <group>
-                        <group>
                         <field name="name"/>
-                        </group>
-                        <group>
                         <field name="hod_id"/>
-                        </group>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
-    <record id="department_action" model="ir.actions.act_window">
-        <field name="name">Department</field>
-        <field name="res_model">department</field>
+
+    <!-- Action -->
+    <record id="action_school_department" model="ir.actions.act_window">
+        <field name="name">Departments</field>
+        <field name="res_model">school.department</field>
         <field name="view_mode">tree,form</field>
     </record>
+    <!-- Menu Item -->
+    <menuitem id="menu_school_department" name="Department" parent="menu_school_management_configuration"
+              action="action_school_department"/>
 </odoo>

@@ -2,9 +2,9 @@
 from odoo import models, fields
 
 
-class AcademicYear(models.Model):
+class SchoolYear(models.Model):
     """create academic year"""
-    _name = 'academic.year'
+    _name = 'school.year'
     _description = 'Academic Year'
 
     name = fields.Char(string='Year')

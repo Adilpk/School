@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-from . import department
-from . import student_class
-from . import subject
-from . import academic_year
+from . import school_department
+from . import school_class
+from . import school_subject
+from . import school_year
+from . import school_year
+

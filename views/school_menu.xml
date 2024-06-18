@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <menuitem id="school_root_menu" name="school Management">
-        <menuitem id="first_menu" name="Configration">
-            <menuitem id="school_department_action" action="department_action"/>
-            <menuitem id="school_class_action" action="student_class_action"/>
-            <menuitem id="school_subject_action" action="subject_action"/>
-            <menuitem id="school_academic_year_action" action="academic_year_action"/>
-        </menuitem>
+    <menuitem id="menu_school_management_root" name="School Management"/>
+    <menuitem id="menu_school_management_configuration" name="Configration" parent="menu_school_management_root">
     </menuitem>
 </odoo>
 

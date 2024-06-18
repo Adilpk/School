@@ -2,9 +2,9 @@
 from odoo import models, fields
 
 
-class StudentSubject(models.Model):
+class SchoolSubject(models.Model):
     """ create a subject module to store subject and department"""
-    _name = 'student.subject'
+    _name = 'school.subject'
     _description = 'Subject'
 
     name = fields.Char(string='Subject')

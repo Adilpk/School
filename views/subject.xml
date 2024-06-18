@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record id="subject_tree_view" model="ir.ui.view">
+    <record id="view_tree_school_subject" model="ir.ui.view">
         <field name="name">subject.tree</field>
-        <field name="model">student.subject</field>
+        <field name="model">school.subject</field>
         <field name="arch" type="xml">
             <tree string="subject">
                 <field name="name"/>
@@ -10,9 +10,9 @@
             </tree>
         </field>
     </record>
-    <record id="subject_form_view" model="ir.ui.view">
+    <record id="view_form_school_subject" model="ir.ui.view">
         <field name="name">subject.form</field>
-        <field name="model">student.subject</field>
+        <field name="model">school.subject</field>
         <field name="arch" type="xml">
             <form string="subject">
                 <sheet>
@@ -24,9 +24,11 @@
             </form>
         </field>
     </record>
-    <record id="subject_action" model="ir.actions.act_window">
+    <record id="action_school_subject" model="ir.actions.act_window">
         <field name="name">Subject</field>
-        <field name="res_model">student.subject</field>
+        <field name="res_model">school.subject</field>
         <field name="view_mode">tree,form</field>
     </record>
+        <menuitem id="menu_school_subject" name="Classes" parent="menu_school_management_configuration"
+              action="action_school_subject"/>
 </odoo>
