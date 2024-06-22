@@ -29,6 +29,7 @@
         <field name="res_model">school.year</field>
         <field name="view_mode">tree,form</field>
     </record>
+
     <menuitem id="menu_school_year" name="Years" parent="menu_school_management_configuration"
               action="action_school_year"/>
 </odoo>
