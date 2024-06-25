@@ -8,4 +8,4 @@ class SchoolSubject(models.Model):
     _description = 'Subject'
 
     name = fields.Char(string='Subject')
-    department_id = fields.Many2one('department', string='Department')
+    department_id = fields.Many2one('school.department', string='Department')

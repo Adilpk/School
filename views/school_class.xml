@@ -29,6 +29,5 @@
         <field name="res_model">school.class</field>
         <field name="view_mode">tree,form</field>
     </record>
-        <menuitem id="menu_school_class" name="Class" parent="menu_school_management_configuration"
-              action="action_school_class"/>
+
 </odoo>

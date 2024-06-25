@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <!-- Tree View -->
-    <record id="view_tree_school_department" model="ir.ui.view">
+    <record id="view_school_department_tree" model="ir.ui.view">
         <field name="name">school.department.tree</field>
         <field name="model">school.department</field>
         <field name="arch" type="xml">
@@ -13,7 +13,7 @@
     </record>
 
     <!-- Form View -->
-    <record id="view_form_school_department" model="ir.ui.view">
+    <record id="view_school_department_form" model="ir.ui.view">
         <field name="name">school.department.form</field>
         <field name="model">school.department</field>
         <field name="arch" type="xml">
@@ -34,8 +34,4 @@
         <field name="res_model">school.department</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <!-- Menu Item -->
-
-    <menuitem id="menu_school_department" name="Department" parent="menu_school_management_configuration"
-              action="action_school_department"/>
 </odoo>

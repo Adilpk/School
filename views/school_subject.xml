@@ -30,6 +30,5 @@
         <field name="view_mode">tree,form</field>
     </record>
     <!-- menu -->
-        <menuitem id="menu_school_subject" name="Subjects" parent="menu_school_management_configuration"
-              action="action_school_subject"/>
+
 </odoo>
