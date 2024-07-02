@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="school_class_1" model="school.class">
+        <field name="name">Class I</field>
+        <field name="department_id" ref="school_department_lp"/>
+    </record>
+    <record id="school_class_2" model="school.class">
+        <field name="name">Class V</field>
+        <field name="department_id" ref="school_department_up"/>
+    </record>
+    <record id="school_class_3" model="school.class">
+        <field name="name">Class X</field>
+        <field name="department_id" ref="school_department_hs"/>
+    </record>
+</odoo>

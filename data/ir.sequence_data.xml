@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="seq_school_student" model="ir.sequence">
+        <field name="name">Student Registration</field>
+        <field name="code">school.student.sequence</field>
+        <field name="prefix">STU</field>
+        <field name="padding">4</field>
+        <field name="number_increment">1</field>
+    </record>
+    <record id="seq_school_reg_student" model="ir.sequence">
+        <field name="name">Student Registration</field>
+        <field name="code">registered.student.sequence</field>
+        <field name="prefix">ADMISSION</field>
+        <field name="padding">4</field>
+        <field name="number_increment">1</field>
+    </record>
+</odoo>

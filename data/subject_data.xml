@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="school_subject_maths" model="school.subject">
+        <field name="name">Maths</field>
+        <field name="department_id" ref="school_department_lp"/>
+    </record>
+    <record id="school_subject_malayalam" model="school.subject">
+        <field name="name">Malayalam</field>
+        <field name="department_id" ref="school_department_up"/>
+    </record>
+    <record id="school_subject_english" model="school.subject">
+        <field name="name">English</field>
+        <field name="department_id" ref="school_department_hs"/>
+    </record>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="school_department_lp" model="school.department">
+        <field name="name">LP</field>
+        <field name="hod_id" ref="base.res_partner_address_15"/>
+    </record>
+    <record id="school_department_up" model="school.department">
+        <field name="name">UP</field>
+        <field name="hod_id" ref="base.res_partner_address_4"/>
+
+    </record>
+    <record id="school_department_hs" model="school.department">
+        <field name="name">HS</field>
+        <field name="hod_id" ref="base.res_partner_address_30"/>
+    </record>
+</odoo>

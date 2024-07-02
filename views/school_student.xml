@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_tree_school_student" model="ir.ui.view">
+        <field name="name">student.tree.view</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <tree string="student">
+                <field name="registration_number"/>
+                <field name="first_name"/>
+                <field name="last_name"/>
+                <field name="dob"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_form_school_student" model="ir.ui.view">
+        <field name="name">student.form.view</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form string="student form">
+                <header>
+                        <button string="Register" class="oe_highlight" name="button_register" type="object"/>
+                        <field name="status" widget="statusbar" statusbar_visible="draft,registered"/>
+                </header>
+                <sheet>
+                    <div class="oe_right">
+                                <field name="photo" widget="image" class="oe_avatar" options="{'size': [90, 90]}"/>
+                            </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="registration_number" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                             <field name="first_name" required="1"/>
+                            <field name="last_name"/>
+                            <field name="registration_date"/>
+                        </group>
+                        <group>
+                             <field name="email"/>
+                            <field name="phone"/>
+                            <field name="dob"/>
+                            <field name="school_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Personal Information">
+                        <group>
+                        <group>
+                            <field name="communication_address"/>
+                            <field name="same_as"/>
+                            <field name="permanent_address" invisible="same_as == True"/>
+                            <field name="father"/>
+                            <field name="mother"/>
+                        </group>
+                        <group>
+                            <field name="gender" widget="radio"/>
+                            <field name="department_id"/>
+                            <field name="class_id"/>
+                            <field name="tc"/>
+                            <field name="aadhar_number"/>
+                            <field name="admission_number"/>
+                        </group>
+                    </group>
+                    </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_school_student" model="ir.actions.act_window">
+        <field name="name">student</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

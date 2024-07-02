@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="all_student_template">
+        <t t-call="website.layout">
+            <div class="container head">
+                    <h4>
+                    Students
+                </h4>
+            </div>
+            <div>
+                <center>
+                    <a href="/register">Student Registration</a>
+                </center>
+            </div>
+            <div class="container table">
+                <table class="table table-bordered mb64">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Date of Birth</th>
+                            <th>Address</th>
+                            <th>Gender</th>
+                            <th>Department</th>
+                            <th>Class</th>
+                            <th>Aadhar Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="students" t-as="student">
+                            <tr>
+                            <td><t t-out="student['first_name']"/></td>
+                                <td><t t-out="student['email']"/> </td>
+                                 <td><t t-out="student['phone']"/> </td>
+                                 <td><t t-out="student['dob']"/> </td>
+                                 <td><t t-out="student['communication_address']"/> </td>
+                                <td><t t-out="student['gender']"/> </td>
+                                <td><t t-out="student['department_id'].name"/> </td>
+                                <td><t t-out="student['class_id'].name"/> </td>
+                                <td><t t-out="student['aadhar_number']"/> </td>
+                        </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+    <template id="student_registration">
+        <t t-call="website.layout">
+            <div class="container head">
+                    <h4>
+                    Registration
+                </h4>
+            </div>
+            <div class="container form-class">
+                <form class="form_validate" action="/register/submit" method="POST">
+                    <input type="hidden" name="csrf_token"
+                           t-att-value="request.csrf_token()"/>
+                    <div class="row space">
+                        <div class="col-6">
+                            <label for="first_name">First Name</label>
+                            <input type="text" name="first_name" class="form-control"/>
+                        </div>
+                        <div class="col-6">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" name="last_name" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="row space">
+                        <div class="col-6">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" class="form-control"/>
+                        </div>
+                        <div class="col-3">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" class="form-control"/>
+                        </div>
+                        <div class="col-3">
+                            <label for="phone">Phone</label>
+                            <input type="phone" name="phone" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="row space">
+                        <div class="col-3">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" name="dob" class="form-control"/>
+                        </div>
+                        <div class="col-3">
+                            <label for="age">Age</label>
+                            <input type="text" name="age" class="form-control" readonly="1"/>
+                        </div>
+                        <div class="col-3">
+                            <label for="department">Department</label>
+                            <select name="department_id" class="form-control">
+                                <option value="" selected="true">select your department</option>
+                                <t t-foreach="department" t-as="dept">
+                                    <option t-att-value="dept.id"><t t-esc="dept.name"/></option>
+                                </t>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <label for="class">Class</label>
+                            <select name="class_id" class="form-control">
+                                <option value="" selected="true">
+                                    Select your class
+                                </option>
+                                <t t-foreach="class" t-as="cl">
+                                    <option t-att-value="cl.id">
+                                        <t t-esc="cl.name"/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row space">
+                        <div class="col-6">
+                            <label for="aadhar">Aadhar</label>
+                            <input type="text" name="aadhar" class="form-control"/>
+                        </div>
+                        <div class="col-3">
+                            <label for="father">Father</label>
+                            <input type="text" name="father" class="form-control"/>
+                        </div>
+                        <div class="col-3">
+                            <label for="mother">Mother</label>
+                            <input type="text" name="mother" class="form-control"/>
+                        </div>
+                    </div>
+                     <div class="form-group col-12 btn-center new_div space" align="center">
+                        <div style="width: 200px;"
+                             class="s_website_form_label"/>
+                        <button type="submit" class="btn btn-primary submit_btn" id="submitbtn">Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>
