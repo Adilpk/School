@@ -7,7 +7,7 @@
     This module helps in managing various aspects of school operations including 
     departments, classes, subjects, academic years, and more.
     """,
- 'depends': ['base', 'web', 'mail'],
+ 'depends': ['base', 'web', 'mail', 'website'],
  'data': ['security/ir.model.access.csv',
           'data/ir.sequence_data.xml',
           'data/department_data.xml',
@@ -18,8 +18,14 @@
           'views/school_subject.xml',
           'views/school_year.xml',
           'views/school_student.xml',
+          'views/school_web_templates.xml',
           'views/school_menu.xml',
           ],
+ 'assets': {
+            'web.assets_frontend': [
+                'school_management/static/src/css/style.css',
+            ]
+        },
  'application': True,
  'license': 'LGPL-3',
 }

@@ -13,4 +13,9 @@
                   action="action_school_subject"/>
         <menuitem id="menu_school_year" name="Years" parent="menu_school_management_configuration"
                   action="action_school_year"/>
+        <record id="website_register_menu" model="website.menu">
+            <field name="name">Register</field>
+            <field name="url">/studentform</field>
+            <field name="parent_id" ref="website.main_menu"/>
+        </record>
 </odoo>
