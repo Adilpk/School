@@ -12,7 +12,7 @@ class SchoolStudent(models.Model):
     last_name = fields.Char(string='Last Name')
     father = fields.Char(string='Father')
     mother = fields.Char(string='Mother')
-    school_id = fields.Many2one('res.company', default=lambda self:self.env.company.id)
+    school_id = fields.Many2many('res.company', default=lambda self:self.env.company.id)
     communication_address = fields.Text(string='Communication Address')
     same_as = fields.Boolean(string='Same As Communication Address')
     permanent_address = fields.Text(string='Permanent Address')
