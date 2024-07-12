@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_school_clubs_tree" model="ir.ui.view">
+        <field name="name">school.clubs.tree</field>
+        <field name="model">school.clubs</field>
+        <field name="arch" type="xml">
+            <tree string="Clubs">
+                <field name="name"/>
+                <field name="established_date"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_school_clubs_form" model="ir.ui.view">
+        <field name="name">school.clubs.form</field>
+        <field name="model">school.clubs</field>
+        <field name="arch" type="xml">
+            <form string="Clubs Form">
+                <sheet>
+                    <group>
+                        <group>
+                           <field name="name"/>
+                        <field name="established_date"/>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                </sheet>
+                <notebook>
+                    <page string="Students">
+                        <group>
+                            <field name="student_ids"/>
+                        </group>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_school_clubs" model="ir.actions.act_window">
+        <field name="name">Clubs</field>
+        <field name="res_model">school.clubs</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
