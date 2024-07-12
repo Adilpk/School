@@ -4,3 +4,5 @@ from . import school_class
 from . import school_subject
 from . import school_year
 from . import school_student
+from . import school_events
+from . import school_clubs

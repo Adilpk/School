@@ -31,6 +31,7 @@ class SchoolStudent(models.Model):
                                       .env['ir.sequence'].next_by_code('school.student.sequence'))
     admission_number = fields.Char(string='Admission Number')
 
+
     status = fields.Selection([('draft', 'Draft'), ('registered', 'Registered')],
                               string='status', default='draft')
 

@@ -33,3 +33,8 @@ class WebFormController(Controller):
             'aadhar_number': post.get('aadhar'),
         })
         return request.redirect('/studentform')
+
+    # @route('/event-form', auth='public', website=True)
+    # def event_form(self, **kwargs):
+    #     events = request.env['']
+    #     return request.render('school_management.event_web_details')
