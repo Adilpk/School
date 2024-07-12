@@ -41,7 +41,7 @@
                              <field name="email"/>
                             <field name="phone"/>
                             <field name="dob"/>
-                            <field name="school_id"  widget="many2many_tags"/>
+                            <field name="school_ids"  widget="many2many_tags"/>
                         </group>
                     </group>
                     <notebook>
