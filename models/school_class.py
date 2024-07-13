@@ -9,3 +9,6 @@ class SchoolClass(models.Model):
 
     name = fields.Char(str='Class')
     department_id = fields.Many2one('school.department', string='Department')
+    hod_id = fields.Many2one(related='department_id.hod_id',string='HOD',strore=True)
+    school_id = fields.Many2one('res.company',
+                                string='Current School')

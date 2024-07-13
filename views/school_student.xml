@@ -36,6 +36,7 @@
                              <field name="first_name" required="1"/>
                             <field name="last_name"/>
                             <field name="registration_date"/>
+                            <field name="age"/>
                         </group>
                         <group>
                              <field name="email"/>
